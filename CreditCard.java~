@@ -1,0 +1,35 @@
+public class CreditCard
+{
+  int[] evens = {0, 0, 0, 0, 0, 0, 0, 0};
+  int totalEvens = 0;
+  public String verify(String num)
+  {
+    String revNum = "";
+    for (int k = num.length() - 1; k >= 0; k--)//flips string around
+    {
+      revNum += num.substring(k, k+1);
+    }
+    for (int i = 1; i<revNum.length(); i += 2)//takes the even digits
+    {
+      int w = 0;
+      evens[w] = Integer.parseInt(revNum.substring(i, i+1));//takes digit from string to int and puts it into an array
+      System.out.println(evens[w]);//extra to make sure the right digit is going in
+      w++;
+    }
+    for (int j = 0; j < evens.length(); j++)
+    {
+      int prelim;
+      if (2*evens[j] >= 10)
+      {
+        int prelim1 = (int)((2*evens[j]))/10);
+int prelim2 =(int)((2*evens[j]))%10);
+      }
+
+    }
+return "purple";
+}
+  public int findType(String num)
+  {
+    return 6;
+  }
+  }
